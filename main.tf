@@ -1,5 +1,13 @@
+
 terraform {
-  required_providers {
+    cloud {
+    organization = "lennart-org"
+
+    workspaces {
+      name = "demo-tfcb-drift"
+    }
+}  
+    required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.16"
